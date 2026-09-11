@@ -1,0 +1,729 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f6f3ff,
+            #eef5ff
+        );
+
+    color: #202033;
+
+    min-height: 100vh;
+
+}
+
+
+header {
+
+    height: 70px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    border-bottom:
+        1px solid #eeeeee;
+
+}
+
+
+.logo {
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    color: #6848e8;
+
+}
+
+
+.subtitle {
+
+    color: #888;
+
+    font-size: 14px;
+
+}
+
+
+main {
+
+    width: 84%;
+
+    max-width: 1050px;
+
+    margin: auto;
+
+}
+
+
+/* HERO */
+
+.hero {
+
+    text-align: center;
+
+    padding: 65px 20px 40px;
+
+}
+
+
+.hero h1 {
+
+    font-size: 45px;
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+
+}
+
+
+.hero h1 span {
+
+    color: #7048e8;
+
+}
+
+
+.hero p {
+
+    color: #777;
+
+    font-size: 17px;
+
+    margin-bottom: 28px;
+
+}
+
+
+/* SEARCH */
+
+.search-box {
+
+    display: flex;
+
+    justify-content: center;
+
+    max-width: 650px;
+
+    margin: auto;
+
+}
+
+
+.search-box input {
+
+    flex: 1;
+
+    padding: 15px 18px;
+
+    border:
+        1px solid #ddd;
+
+    border-radius:
+        10px 0 0 10px;
+
+    outline: none;
+
+    font-size: 14px;
+
+}
+
+
+.search-box input:focus {
+
+    border-color: #7048e8;
+
+}
+
+
+.search-box button {
+
+    border: none;
+
+    padding: 0 25px;
+
+    border-radius:
+        0 10px 10px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7048e8,
+            #a34fe8
+        );
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.examples {
+
+    margin-top: 15px;
+
+    color: #888;
+
+    font-size: 13px;
+
+}
+
+
+.examples button {
+
+    border: none;
+
+    background: #eee9ff;
+
+    color: #6545d0;
+
+    padding: 6px 10px;
+
+    border-radius: 15px;
+
+    margin: 3px;
+
+    cursor: pointer;
+
+}
+
+
+/* RESULT TITLE */
+
+.result-title {
+
+    margin:
+        20px 0;
+
+}
+
+
+.result-title p {
+
+    color: #888;
+
+    font-size: 13px;
+
+}
+
+
+.result-title h2 {
+
+    color: #7048e8;
+
+    font-size: 25px;
+
+}
+
+
+/* STATS */
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.card {
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 23px;
+
+    box-shadow:
+        0 6px 25px
+        rgba(70, 60, 130, 0.07);
+
+}
+
+
+.card .emoji {
+
+    font-size: 27px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.card p {
+
+    color: #888;
+
+    font-size: 13px;
+
+}
+
+
+.card h2 {
+
+    font-size: 29px;
+
+    margin-top: 5px;
+
+}
+
+
+.card.purple {
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7048e8,
+            #a34fe8
+        );
+
+}
+
+
+.card.purple p {
+
+    color: #eee;
+
+}
+
+
+/* BOX */
+
+.box {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 6px 25px
+        rgba(70, 60, 130, 0.07);
+
+}
+
+
+.box h2 {
+
+    font-size: 21px;
+
+}
+
+
+.description {
+
+    color: #888;
+
+    font-size: 13px;
+
+    margin:
+        5px 0 25px;
+
+}
+
+
+/* SKILLS */
+
+.skill-item {
+
+    margin-bottom: 17px;
+
+}
+
+
+.skill-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 6px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+.progress {
+
+    width: 100%;
+
+    height: 9px;
+
+    background: #eeeeee;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.progress-bar {
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7048e8,
+            #ed4ca0
+        );
+
+    border-radius: 20px;
+
+    transition:
+        width 1s ease;
+
+}
+
+
+/* INSIGHT */
+
+.insight {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    margin-bottom: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eee8ff,
+            #ffeaf5
+        );
+
+}
+
+
+.bigEmoji {
+
+    font-size: 38px;
+
+}
+
+
+.insight h2 {
+
+    margin-bottom: 5px;
+
+}
+
+
+.insight p {
+
+    color: #666;
+
+    line-height: 1.5;
+
+}
+
+
+/* JOBS */
+
+.jobs {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.job-card {
+
+    border:
+        1px solid #eeeeee;
+
+    padding: 18px;
+
+    border-radius: 13px;
+
+    transition: 0.25s;
+
+}
+
+
+.job-card:hover {
+
+    border-color: #8059e8;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.job-card h3 {
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.company {
+
+    color: #7048e8;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+.location {
+
+    color: #888;
+
+    font-size: 12px;
+
+    margin-top: 7px;
+
+}
+
+
+.badges {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+
+    margin-top: 12px;
+
+}
+
+
+.badge {
+
+    background: #f0ebff;
+
+    color: #6545d0;
+
+    padding: 5px 8px;
+
+    border-radius: 15px;
+
+    font-size: 10px;
+
+}
+
+
+.job-link {
+
+    display: inline-block;
+
+    margin-top: 12px;
+
+    color: #7048e8;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+/* LOADING */
+
+.loading {
+
+    text-align: center;
+
+    padding: 30px;
+
+}
+
+
+.spinner {
+
+    width: 35px;
+
+    height: 35px;
+
+    border:
+        4px solid #ddd;
+
+    border-top:
+        4px solid #7048e8;
+
+    border-radius: 50%;
+
+    margin:
+        0 auto 12px;
+
+    animation:
+        spin 0.8s linear infinite;
+
+}
+
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* ERROR */
+
+.error {
+
+    background: #ffe8e8;
+
+    color: #c0392b;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+
+}
+
+
+.hidden {
+
+    display: none;
+
+}
+
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #999;
+
+    font-size: 12px;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width: 700px) {
+
+    .stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .jobs {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 33px;
+
+    }
+
+
+    .search-box {
+
+        flex-direction: column;
+
+    }
+
+
+    .search-box input {
+
+        border-radius: 10px;
+
+        margin-bottom: 8px;
+
+    }
+
+
+    .search-box button {
+
+        padding: 14px;
+
+        border-radius: 10px;
+
+    }
+
+
+    header {
+
+        padding: 0 5%;
+
+    }
+
+
+    .subtitle {
+
+        display: none;
+
+    }
+
+}

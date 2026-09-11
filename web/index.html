@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SkillScout</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        ⚡ SkillScout
+    </div>
+
+    <div class="subtitle">
+        Job Market Skill Analyzer
+    </div>
+
+</header>
+
+
+<main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h1>
+
+            Discover the skills
+
+            <span>
+                companies want.
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            Enter a job role and discover
+            the skills employers are looking for.
+
+        </p>
+
+
+        <div class="search-box">
+
+            <input
+                id="roleInput"
+                type="text"
+                placeholder="Enter job role e.g. Data Scientist"
+            >
+
+
+            <button
+                id="analyzeBtn"
+                onclick="analyzeRole()"
+            >
+
+                🔍 Analyze
+
+            </button>
+
+        </div>
+
+
+        <div class="examples">
+
+            Try:
+
+            <button onclick="setRole('Data Scientist')">
+                Data Scientist
+            </button>
+
+            <button onclick="setRole('Machine Learning Engineer')">
+                ML Engineer
+            </button>
+
+            <button onclick="setRole('Java Developer')">
+                Java Developer
+            </button>
+
+            <button onclick="setRole('Web Developer')">
+                Web Developer
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- LOADING -->
+
+    <div
+        id="loading"
+        class="loading hidden"
+    >
+
+        <div class="spinner"></div>
+
+        <p>
+            🔎 Searching jobs and analyzing skills...
+        </p>
+
+    </div>
+
+
+    <!-- ERROR -->
+
+    <div
+        id="error"
+        class="error hidden"
+    ></div>
+
+
+    <!-- RESULTS -->
+
+    <section
+        id="dashboard"
+        class="hidden"
+    >
+
+
+        <div class="result-title">
+
+            <p>
+                Analysis for
+            </p>
+
+            <h2 id="roleTitle">
+                -
+            </h2>
+
+        </div>
+
+
+        <!-- STATS -->
+
+        <div class="stats">
+
+
+            <div class="card">
+
+                <div class="emoji">
+                    💼
+                </div>
+
+                <p>
+                    Jobs Analyzed
+                </p>
+
+                <h2 id="jobCount">
+                    0
+                </h2>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="emoji">
+                    🧠
+                </div>
+
+                <p>
+                    Skills Found
+                </p>
+
+                <h2 id="skillCount">
+                    0
+                </h2>
+
+            </div>
+
+
+            <div class="card purple">
+
+                <div class="emoji">
+                    🔥
+                </div>
+
+                <p>
+                    Top Skill
+                </p>
+
+                <h2 id="topSkill">
+                    -
+                </h2>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- SKILLS -->
+
+        <div class="box">
+
+            <h2>
+                🔥 Most Demanded Skills
+            </h2>
+
+            <p class="description">
+
+                Percentage of analyzed jobs
+                mentioning each skill.
+
+            </p>
+
+
+            <div id="skillList"></div>
+
+        </div>
+
+
+        <!-- INSIGHT -->
+
+        <div class="insight">
+
+            <div class="bigEmoji">
+                🎯
+            </div>
+
+
+            <div>
+
+                <h2>
+                    Career Insight
+                </h2>
+
+                <p id="insight">
+                    -
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- JOBS -->
+
+        <div class="box">
+
+            <h2>
+                💼 Matching Job Listings
+            </h2>
+
+            <p class="description">
+
+                Jobs found for your selected role.
+
+            </p>
+
+
+            <div
+                id="jobList"
+                class="jobs"
+            ></div>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    SkillScout • Web Scraping & Skill Analysis
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
